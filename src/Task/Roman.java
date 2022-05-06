@@ -1,7 +1,7 @@
 package Task;
 
 public class Roman {
-    String[] romanValue = {"null", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
+    String[] romanValue = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
             "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
             "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX",
             "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL",
@@ -13,11 +13,11 @@ public class Roman {
             "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX", "C"};
 
    public boolean testRomanNum(String input) {
-        for (int i = 0; i < romanValue.length; i++) {
-            if(input.equals(romanValue[i])) {
-                return true;
-            }
-        }
+       for (String s : romanValue) {
+           if (input.equals(s)) {
+               return true;
+           }
+       }
         return false;
     }
 
