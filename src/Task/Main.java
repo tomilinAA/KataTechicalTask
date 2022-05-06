@@ -7,7 +7,7 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Введите мат операцию. Пример 2 + 2 или I + I");
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.  пїЅпїЅпїЅпїЅпїЅпїЅ 2 + 2 пїЅпїЅпїЅ I + I");
         String res = scanner.nextLine();
         System.out.println(calc(res));
     }
@@ -15,11 +15,11 @@ public class Main {
     public static String calc(String input) throws Exception {
         String[] arr = input.split(" ");
         if (arr.length > 3) {
-            throw new Exception("т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+            throw new Exception("пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (+, -, /, *)");
         } else if (arr.length == 1) {
-            throw new Exception("т.к. строка не является математической операцией");
+            throw new Exception("пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         } else if (arr[1].equals(" ")) {
-            throw new Exception("неверный формат ввода. 1 + 1");
+            throw new Exception("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ. 1 + 1");
         }
         int res = 0;
         boolean Roman = false;
@@ -35,11 +35,11 @@ public class Main {
             num1 = Integer.parseInt(arr[0]);
             num2 = Integer.parseInt(arr[2]);
         } catch (Exception exception) {
-            throw new Exception("т.к. используются одновременно разные системы счисления");
+            throw new Exception("пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         }
 
             if ((num1 < 0 || num1 > 10) || (num2 < 0 || num2 > 10)) {
-                throw new Exception("на вход числа от 1 до 10 включительно, не более");
+                throw new Exception("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 1 пїЅпїЅ 10 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
             }
             {
                 switch (arr[1]) {
@@ -56,12 +56,12 @@ public class Main {
                         res = num1 / num2;
                         break;
                     default:
-                        throw new Exception("Введен недопустимый операнд. (+,-,*,/)");
+                        throw new Exception("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. (+,-,*,/)");
                 }
 
                 if (Roman) {
                     if (res <= 0) {
-                        throw new Exception("т.к. в римской системе нет отрицательных чисел");
+                        throw new Exception("пїЅ.пїЅ. пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
                     }
                     return roman.romanValue[res];
                 }
