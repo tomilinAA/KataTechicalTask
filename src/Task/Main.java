@@ -18,7 +18,6 @@ public class Main {
         } else if (arr.length == 1) {
             throw new Exception("т.к. строка не является математической операцией");
         }
-        int res;
         boolean Roman = false;
         Roman roman = new Roman();
         if (roman.testRomanNum(arr[0]) && roman.testRomanNum(arr[2])) {
@@ -26,8 +25,7 @@ public class Main {
             arr[2] = roman.NumbersOfRoman(arr[2]);
             Roman = true;
         }
-            int num1;
-        int num2;
+        int res,num1, num2;
         try {
             num1 = Integer.parseInt(arr[0]);
             num2 = Integer.parseInt(arr[2]);
