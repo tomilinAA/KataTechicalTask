@@ -7,7 +7,7 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        System.out.println("������� ��� ��������. ������ 2 + 2 ��� I + I");
+        System.out.println("ВВедем ��� ��������. ������ 2 + 2 ��� I + I");
         String res = scanner.nextLine();
         System.out.println(calc(res));
     }
